@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 /**
  * main - print 1 to 100, except certain multiples
  *
@@ -38,5 +36,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-}
-
