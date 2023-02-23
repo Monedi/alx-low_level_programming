@@ -1,24 +1,42 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_square - print square
- * @size: size of square in row/col units
+ * main - print 1 to 100, except certain multiples
+ *
+ * Description: print numbers 1 to 100, if number
+ * is multiple of 3 print "Fizz" instead, if number
+ * is multiple of 5 print "Buzz" instead, if number
+ * is mulptiple of 3 and 5 print "FizzBuzz"
+ * Return: 0 on Success
  */
-void print_square(int size)
+int main(void)
 {
-	int i;
-	int j;
+	int i = 2, j = 1;
 
-	if (size > 0)
+	printf("%d", j);
+
+	while (i < 101)
 	{
-		for (i = 0; i < size; i++)
+		if (i % 3 == 0 && i % 5 == 0)
 		{
-			for (j = 0; j < size; j++)
-				_putchar('#');
-			_putchar('\n');
+			printf(" FizzBuzz");
 		}
+		else if (i % 3 == 0)
+		{
+			printf(" Fizz");
+		}
+		else if (i % 5 == 0)
+		{
+			printf(" Buzz");
+		}
+		else
+		{
+			printf(" %d", i);
+		}
+		i++;
 	}
-	else
-		_putchar('\n');
+	printf("\n");
+	return (0);
+}
 }
 
