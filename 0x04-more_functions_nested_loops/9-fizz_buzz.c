@@ -1,38 +1,26 @@
+#include "main.h"
+#include <stdio.h>
+
 /**
- * main - print 1 to 100, except certain multiples
- *
- * Description: print numbers 1 to 100, if number
- * is multiple of 3 print "Fizz" instead, if number
- * is multiple of 5 print "Buzz" instead, if number
- * is mulptiple of 3 and 5 print "FizzBuzz"
- * Return: 0 on Success
+ * main - Entry piont
+ * Return: Always 0
  */
 int main(void)
 {
-	int i = 2, j = 1;
+	int i = 1;
 
-	printf("%d", j);
-
-	while (i < 101)
+	for (; i < 100 ; i++)
 	{
 		if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf(" FizzBuzz");
-		}
+			printf("FizzBuzz ");
 		else if (i % 3 == 0)
-		{
-			printf(" Fizz");
-		}
+			printf("Fizz ");
 		else if (i % 5 == 0)
-		{
-			printf(" Buzz");
-		}
+			printf("Buzz ");
 		else
-		{
-			printf(" %d", i);
-		}
-		i++;
+			printf("%d ", i);
 	}
-	printf("\n");
+	printf("Buzz\n");
+
 	return (0);
 }
